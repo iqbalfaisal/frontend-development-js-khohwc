@@ -3,9 +3,9 @@ import "./StartNow.css";
 
 export default function StartNow() {
   return (
-    <div class="start-now">
-      <h1 class="title">Boost your links today</h1>
-      <button class="btn btn-primary">Get Started</button>
+    <div className="start-now">
+      <h1 className="title">Boost your links today</h1>
+      <button className="btn btn-primary">Get Started</button>
     </div>
   );
 }

@@ -1,0 +1,125 @@
+.intro {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: inherit;
+  overflow: hidden;
+}
+
+.intro .img-container {
+  grid-column: 2/4;
+  justify-self: end;
+  grid-row: 1;
+}
+
+.intro .content {
+  grid-column: 2/3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 60%;
+}
+
+.intro .content > * {
+  margin-bottom: 40px;
+}
+
+.intro .content .btn {
+  padding: 19px 40px;
+}
+
+.intro .title {
+  font-size: 80px;
+  line-height: 1.1;
+}
+
+.intro .desc {
+  display: block;
+  max-width: 70%;
+  color: var(--grayish-violet);
+}
+
+.intro .form {
+  grid-row: 2;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  margin-top: 67px;
+  padding: 50px;
+  background: var(--dark-violet)
+    url(../../resources/images/bg-shorten-desktop.svg) no-repeat;
+  background-size: cover;
+  border-radius: 9px;
+}
+
+.intro .form input {
+  flex: 1;
+  font-size: 20px;
+  padding: 17px 32px;
+  border-radius: 4px;
+  margin-right: 25px;
+  border-radius: 9px;
+  border: none;
+}
+
+.intro .form .btn {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-radius: 9px;
+}
+
+@media (max-width: 1439px) {
+  .intro .content {
+    grid-row: 2;
+    max-width: none;
+    align-items: center;
+  }
+
+  .intro .title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .intro .desc {
+    color: var(--grayish-violet);
+    text-align: center;
+    max-width: none;
+    margin-bottom: 35px;
+  }
+
+  .intro .img-container {
+    width: 530px;
+    padding-left: 15px;
+  }
+  .intro img {
+    margin-bottom: 40px;
+    object-position: 0px 0;
+    width: 100%;
+  }
+
+  .intro .form {
+    grid-row: 3;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .intro .form {
+    background: var(--dark-violet)
+      url(../../resources/images/bg-shorten-mobile.svg) no-repeat;
+    background-position: right top;
+    padding: 25px;
+  }
+
+  .intro .form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 23px;
+    font-size: 16px;
+  }
+
+  .intro .form .btn {
+    padding: 16px 40px;
+  }
+}

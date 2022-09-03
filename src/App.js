@@ -1,10 +1,11 @@
 import "./App.css";
-import { Footer, NavBar, StartNow } from "./components";
+import { Footer, Intro, NavBar, StartNow } from "./components";
 
 function App() {
   return (
     <div className="root">
       <NavBar />
+      <Intro />
       <StartNow />
       <Footer />
     </div>

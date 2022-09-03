@@ -4,4 +4,5 @@ export const Images = {
   twitter: require("./images/icon-twitter.svg").default,
   pinterest: require("./images/icon-pinterest.svg").default,
   instagram: require("./images/icon-instagram.svg").default,
+  illustration: require("./images/illustration-working.svg").default,
 };
