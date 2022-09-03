@@ -1,0 +1,157 @@
+.stats {
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: inherit;
+
+  background-color: #f0f1f6;
+  padding: 210px 0 120px;
+  margin-top: -83px;
+}
+
+.stats .content {
+  grid-column: 2/3;
+}
+
+.stats .title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.stats .desc {
+  font-size: 18px;
+  color: var(--grayish-violet);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.cards {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  align-items: start;
+}
+
+.cards .card {
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 32px 40px;
+  position: relative;
+}
+
+.card .card-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--dark-violet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(32px, -50%);
+}
+
+.card .card-title {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.card .card-body {
+  color: var(--grayish-violet);
+  font-size: 15px;
+}
+
+.card:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-color: var(--cyan);
+  width: 8px;
+  height: 47px;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.card:nth-child(2) {
+  margin-top: 45px;
+}
+
+.card:nth-child(3) {
+  margin-top: 90px;
+}
+.card:nth-child(1)::after {
+  top: 150px;
+  right: -19px;
+  left: auto;
+  transform: rotateZ(90deg);
+  height: 30px;
+}
+
+.card:nth-child(2)::after {
+  top: 105px;
+  right: -19px;
+  left: auto;
+  transform: rotateZ(90deg);
+  height: 30px;
+}
+
+@media (max-width: 1439px) {
+  .stats .title {
+    font-size: 28px;
+  }
+
+  .stats .desc {
+    line-height: 1.8;
+  }
+
+  .stats .desc br {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    row-gap: 92px;
+  }
+
+  .cards .card {
+    text-align: center;
+  }
+
+  .card:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    background-color: var(--cyan);
+    width: 8px;
+    height: 47px;
+    left: 50%;
+    top: 100%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .card .card-icon {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card .card-body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .card:nth-child(3) {
+    margin-top: 0px;
+  }
+}
