@@ -18,12 +18,12 @@ export default function Intro() {
         <img src={Images.illustration} alt="" role="presentation" />
       </div>
 
-      <form className="form">
+      {/* <form className="form">
         <input type="url" placeholder="Shorten a link here&hellip;" />
         <button type="submit" className="btn btn-primary">
           Shorten It!
         </button>
-      </form>
+      </form> */}
     </div>
   );
 }

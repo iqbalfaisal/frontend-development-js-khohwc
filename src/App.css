@@ -2,7 +2,7 @@
   max-width: 1440px;
   margin: 0 auto;
 
-  display: grid;
+  /* display: grid; */
   grid-template-columns: minmax(15px, 165px) 1fr minmax(15px, 165px);
 }
 

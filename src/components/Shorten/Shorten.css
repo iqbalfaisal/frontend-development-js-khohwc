@@ -1,0 +1,163 @@
+section {
+  padding: 5rem 0;
+}
+
+.link {
+  position: relative;
+  background-color: #f0f1f6;
+}
+
+.link .container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.btn-rectangle {
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: none;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--cyan);
+}
+
+.link::after {
+  content: "";
+  top: 14rem;
+  position: absolute;
+  width: 100%;
+  height: 200vh;
+  background-color: var(--neutral-light-gray);
+  z-index: -1;
+}
+
+.main-link {
+  background: url(../../resources/images/bg-shorten-mobile.svg) no-repeat;
+  background-size: cover;
+  background-color: var(--primary-violet);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.main-link #input-link {
+  padding: 1.5rem;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.main-link input::placeholder {
+  color: var(--neutral-gray-violet);
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.error {
+  color: var(--secondary-red);
+  display: none;
+}
+
+.error.show {
+  display: block;
+}
+
+.main-link #input-link.show {
+  border: 3px solid var(--secondary-red);
+}
+
+.main-link #input-link.show::placeholder {
+  color: var(--secondary-red);
+}
+
+.shorten-link {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 4rem 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+.title-url {
+  color: var(--neutral-dark-blue);
+  position: relative;
+  padding-bottom: 1rem;
+  font-weight: normal;
+}
+
+.title-url::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--neutral-light-gray);
+}
+
+.title-link {
+  display: block;
+  color: var(--primary-cyan);
+  padding-top: 1rem;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 1000px) {
+  .link::after {
+    top: 12rem;
+  }
+  .main-link {
+    flex-direction: row;
+    background: url(../../resources/images/bg-shorten-mobile.svg) no-repeat;
+    background-color: var(--primary-violet);
+    padding: 3.3rem 3rem;
+    position: relative;
+    background-size: cover;
+  }
+  .main-link #input-link {
+    margin-bottom: 0;
+    margin-right: 2rem;
+    flex-basis: 75%;
+  }
+  .main-link .btn-rectangle {
+    margin-top: 0rem;
+    flex: 1;
+  }
+  .error {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+  }
+  .shorten-link {
+    display: flex;
+    align-items: center;
+  }
+  .title-url {
+    padding-bottom: 0;
+    flex: 1;
+  }
+  .title-url::after {
+    display: none;
+  }
+  .title-link {
+    padding-top: 0;
+    flex: 1;
+    text-align: right;
+  }
+  .shorten-link .btn-rectangle {
+    margin-top: 0;
+    margin-left: 1rem;
+    flex-basis: 5rem;
+    font-size: 1.6rem;
+  }
+}
