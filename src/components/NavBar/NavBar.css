@@ -1,0 +1,134 @@
+.app-header {
+  height: 160px;
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.app-header .navbar {
+  grid-row: 1;
+  grid-column: 2/3;
+
+  display: flex;
+  align-items: center;
+}
+
+.app-header .navbar-brand {
+  line-height: 0;
+  margin-right: 45px;
+}
+
+.app-header .toggle-nav {
+  display: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.app-header .toggle-nav .icon-menu {
+  fill: var(--gray);
+}
+
+.app-header .navbar-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 14px;
+}
+
+.app-header .navbar-nav a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--grayish-violet);
+}
+
+.app-header .navbar-nav a:active {
+  color: var(--dark-violet);
+}
+
+.app-header .navbar .actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-header .btn-login {
+  margin-left: auto;
+}
+
+#nav-visible {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.separator-mobile {
+  height: 0;
+}
+
+@media (max-width: 1439px) {
+  .app-header {
+    height: 90px;
+  }
+
+  .app-header .toggle-nav {
+    display: block;
+  }
+
+  .app-header .navbar {
+    justify-content: space-between;
+  }
+
+  .app-header .navbar-nav {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    right: 15px;
+    background-color: var(--dark-violet);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px 40px;
+    border-radius: 9px;
+  }
+  .app-header .navbar-nav a {
+    padding: 15px 0;
+    margin-right: 0;
+    font-size: 18px;
+    color: white;
+  }
+
+  .app-header .navbar-nav a:active {
+    color: var(--gray);
+  }
+
+  .app-header .btn {
+    align-self: stretch;
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+  }
+
+  .app-header .btn-login {
+    margin-left: 0;
+    color: white;
+    background-color: transparent;
+    margin-bottom: 15px;
+  }
+
+  .app-header .btn-login:active {
+    color: var(--gray);
+  }
+
+  .separator-mobile {
+    background: var(--gray);
+    height: 1px;
+    align-self: stretch;
+    margin: 20px 0 30px;
+  }
+
+  #nav-visible:not(:checked) ~ .navbar .navbar-nav {
+    display: none;
+  }
+}
