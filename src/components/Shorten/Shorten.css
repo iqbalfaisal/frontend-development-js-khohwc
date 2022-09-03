@@ -38,9 +38,9 @@ section {
 }
 
 .main-link {
-  background: url(../../resources/images/bg-shorten-mobile.svg) no-repeat;
+  background: var(--dark-violet)
+    url(../../resources/images/bg-boost-desktop.svg) 0 0 no-repeat scroll;
   background-size: cover;
-  background-color: var(--primary-violet);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -118,8 +118,9 @@ section {
   }
   .main-link {
     flex-direction: row;
-    background: url(../../resources/images/bg-shorten-mobile.svg) no-repeat;
-    background-color: var(--primary-violet);
+    background: var(--dark-violet)
+      url(../../resources/images/bg-boost-desktop.svg) 0 0 no-repeat scroll;
+    background-size: cover;
     padding: 3.3rem 3rem;
     position: relative;
     background-size: cover;
